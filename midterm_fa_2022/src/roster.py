@@ -28,5 +28,22 @@ class Roster(object):
         self.roster['country'] = 'USA'
         self.roster['members'] = []
 
+    """Retrieve file path of json file"""
+    def _retrieve_file_path(self):
+        where_file = input("Please enter the path and filename: ")
+        return where_file
+
+    def load_roster(self):
+        if __debug__:
+            print('attempting to load roster...')
+        try:
+            file_path = self._retrieve_file_path()
+            with open(file_path, 'r', encoding='UTF-8') as f:
+                self.roster = json.loads(f.read())
+        except OSError:
+            print('File path or file does not exist. Try again.')
+        
+
+
     def save_roster(self):
         pass
