@@ -10,7 +10,7 @@
 # Global Constants
 # TOOLS: A list of required tools. Edit as required. Sometoolnotinstalled to 
 #        show what a missing tool message looks like. 
-declare -r TOOLS="git python3 pipenv"
+declare -r TOOLS="git python pipenv"
 
 # Global Variables 
 declare _confirm=1
