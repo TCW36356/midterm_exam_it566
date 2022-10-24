@@ -80,6 +80,7 @@ class RosterApp(object):
 	def print_roster(self):
 		"""Print roster."""
 		self.clear_screen()
+		print(self.team_roster.roster)
 		if __debug__:
 			print('print_roster() method called...')
 		
