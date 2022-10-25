@@ -49,4 +49,10 @@ class Roster(object):
         self.roster['members'].append({"name" : new_member, "age" : int(member_age)})
 
     def save_roster(self):
-        pass
+        if __debug__:
+            print('Attempting to save roster...')
+        if self.roster != None:
+            file_path2 = self._retrieve_file_path()
+            with open(file_path2, 'w', encoding='UTF-8') as f:
+                f.write(json.dumps(self.roster))
+    
