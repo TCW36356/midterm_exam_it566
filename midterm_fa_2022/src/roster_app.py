@@ -89,6 +89,8 @@ class RosterApp(object):
 	def save_roster(self):
 		"""Save roster to file."""
 		self.clear_screen()
+		self.team_roster.save_roster()
+		print('Roster saved.')
 		if __debug__:
 			print('save_roster() method called...')
 		
