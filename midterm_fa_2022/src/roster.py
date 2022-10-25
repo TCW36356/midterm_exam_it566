@@ -43,7 +43,10 @@ class Roster(object):
         except OSError:
             print('File path or file does not exist. Try again.')
         
-
+    def add_members(self, new_member, member_age):
+        if __debug__:
+            print('Adding new member to roster.')
+        self.roster['members'].append({"name" : new_member, "age" : int(member_age)})
 
     def save_roster(self):
         pass

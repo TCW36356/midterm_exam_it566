@@ -97,6 +97,12 @@ class RosterApp(object):
 	def add_members(self):
 		"""Add items to roster."""
 		self.clear_screen()
+		adding_members = 'y'
+		while adding_members[0] == 'y':
+			new_member = input('What is their name? ')
+			member_age = input('How old are they? ')
+			self.team_roster.add_members(new_member, member_age)
+			adding_members = input('Do you want to add another member? (y/n): ')
 		if __debug__:
 			print('print_roster() method called...')
 
